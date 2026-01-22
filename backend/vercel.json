@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "rewrites": [
+        {
+            "source": "/health",
+            "destination": "/api/health"
+        },
+        {
+            "source": "/debug/(.*)",
+            "destination": "/api/debug/$1"
+        }
+    ]
+}
