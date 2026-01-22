@@ -28,7 +28,7 @@ type Props = {
 };
 
 export default function SendRegisterForm({ auth, onLogout }: Props) {
-  const API = "http://127.0.0.1:3001";
+  const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:3001";
   const ODOO_ORIGIN = "http://127.0.0.1:8069";
   const navigate = useNavigate();
 

@@ -1,4 +1,5 @@
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import type { FormEvent } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import type { OdooAuth } from "./auth";
 
@@ -8,7 +9,7 @@ type Props = {
 };
 
 export default function LoginPage({ auth, onLogin }: Props) {
-  const API = "http://127.0.0.1:3001";
+  const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:3001";
   const navigate = useNavigate();
   const location = useLocation();
 
