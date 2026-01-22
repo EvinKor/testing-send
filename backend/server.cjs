@@ -15,10 +15,10 @@ app.use(express.json());
 // =========================
 // ✅ CONFIG (EDIT THESE)
 // =========================
-const ODOO_URL = "http://127.0.0.1:8069";
-const ODOO_DB = "odoo_database_clear2"; // <-- CHANGE to your real DB name
-const ODOO_USER = "admin"; // <-- CHANGE
-const ODOO_PASS = "admin"; // <-- CHANGE
+const ODOO_URL = process.env.ODOO_URL;
+const ODOO_DB = process.env.ODOO_DB; // <-- CHANGE to your real DB name
+const ODOO_USER = process.env.ODOO_USER; // <-- CHANGE
+const ODOO_PASS = process.env.ODOO_PASS; // <-- CHANGE
 
 // =========================
 // JSON-RPC helper
